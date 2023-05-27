@@ -2,8 +2,8 @@ import './App.scss';
 
 const App = () => {
   return (
-    <div >
-      Witaj
+    <div className='appContainer'>
+
     </div>
   );
 }
