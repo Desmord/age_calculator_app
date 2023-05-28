@@ -1,0 +1,61 @@
+@import '../../Global.scss';
+
+.container {
+    position: relative;
+    margin: 0 auto;
+    width: 728px;
+    height: 96px;
+
+    .line {
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        top: calc(50% - 1px);
+        background-color: $color-neutral-light-grey;
+    }
+
+    .button {
+        position: absolute;
+        right: 0px;
+        width: 96px;
+        aspect-ratio: 1;
+        display: grid;
+        place-content: center;
+        background-color: $color-primary-purple;
+        border-radius: 50%;
+
+        &:hover {
+            cursor: pointer;
+            background-color: black;
+        }
+    }
+}
+
+@media all and (max-width:850px) {
+    .container {
+        width: 528px;
+    }
+
+    .button {
+        left: calc(50% - 48px);
+    }
+}
+
+@media all and (max-width:640px) {
+    .container {
+        width: 295px;
+        height: 64px;
+        top:-10px;
+
+        .button {
+            width: 64px;
+            left: calc(50% - 32px);
+
+            img{
+                width: 24px;
+                aspect-ratio: 1;
+            }
+        }
+    }
+
+}

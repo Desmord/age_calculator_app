@@ -37,10 +37,10 @@ const App = () => {
         monthError={monthError}
         yearError={yearError} />
       <SubmitPanel updateResult={updateResult} />
-      <Results
+      {/* <Results
         days={resultDays}
         months={resultMonths}
-        years={resultYears} />
+        years={resultYears} /> */}
     </div>
   );
 }
