@@ -34,6 +34,7 @@
 @media all and (max-width:850px) {
     .container {
         width: 528px;
+        top:10px;
     }
 
     .button {
@@ -45,7 +46,7 @@
     .container {
         width: 295px;
         height: 64px;
-        top:-10px;
+      
 
         .button {
             width: 64px;

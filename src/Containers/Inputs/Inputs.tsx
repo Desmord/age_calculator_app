@@ -8,13 +8,13 @@ type TypeInputs = {
     month: string,
     setMonth: React.Dispatch<React.SetStateAction<string>>,
     year: string,
-    setyear: React.Dispatch<React.SetStateAction<string>>,
+    setYear: React.Dispatch<React.SetStateAction<string>>,
     dayError: string,
     monthError: string,
     yearError: string,
 }
 
-const Inputs = ({ day, setDay, month, setMonth, year, setyear,dayError,monthError,yearError }: TypeInputs) => {
+const Inputs = ({ day, setDay, month, setMonth, year, setYear, dayError, monthError, yearError }: TypeInputs) => {
 
 
     const isError = (errorText: string): boolean => errorText.length !== 0 ? true : false;
@@ -24,6 +24,8 @@ const Inputs = ({ day, setDay, month, setMonth, year, setyear,dayError,monthErro
             <div className={styles.inputCell}>
                 <span className={isError(dayError) ? styles.errorActive : ``}>DAY</span>
                 <input
+                    value={day}
+                    onChange={(e) => setDay(e.target.value)}
                     className={isError(dayError) ? styles.errorActive : ``}
                     type="text"
                     placeholder='DD'
@@ -33,6 +35,8 @@ const Inputs = ({ day, setDay, month, setMonth, year, setyear,dayError,monthErro
             <div className={styles.inputCell}>
                 <span className={isError(monthError) ? styles.errorActive : ``}>MONTH</span>
                 <input
+                    value={month}
+                    onChange={(e) => setMonth(e.target.value)}
                     className={isError(monthError) ? styles.errorActive : ``}
                     type="text"
                     placeholder='MM'
@@ -42,6 +46,8 @@ const Inputs = ({ day, setDay, month, setMonth, year, setyear,dayError,monthErro
             <div className={styles.inputCell}>
                 <span className={isError(yearError) ? styles.errorActive : ``}>YEAR</span>
                 <input
+                    value={year}
+                    onChange={(e) => setYear(e.target.value)}
                     className={isError(yearError) ? styles.errorActive : ``}
                     type="text"
                     placeholder='YYYY'
