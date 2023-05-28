@@ -22,10 +22,15 @@ body {
     border-radius: 24px 24px 200px 24px;
 }
 
-@media all and (max-width:850px) {}
+@media all and (max-width:850px) {
+    .appContainer {
+        width: 630px;
+    }
+}
 
 @media all and (max-width:640px) {
     .appContainer{
+        width: 343px;
         border-radius: 24px 24px 100px 24px;
     }
 }

@@ -1,0 +1,97 @@
+@import '../../Global.scss';
+
+.container {
+    padding-top: 56px;
+    width: 728px;
+    margin: 0 auto;
+    display: flex;
+    gap: 32px;
+}
+
+.inputCell {
+    width: 160px;
+    height: 130px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+
+    span:first-of-type {
+        font-size: 14px;
+        color: $color-neutral-smokey-grey;
+        letter-spacing: 3px;
+    }
+
+    span.errorActive {
+        color: $color-primary-light-red;
+    }
+
+    input {
+        height: 72px;
+        width: 100%;
+        padding-left: 24px;
+        border-radius: 8px;
+        border: none;
+        border: 1px solid $color-neutral-light-grey;
+        font-size: 32px;
+        font-weight: 700;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &:focus {
+            border: none;
+            border: 1px solid $color-primary-purple;
+            outline: none;
+        }
+    }
+
+    input.errorActive {
+        border: none;
+        border: 1px solid $color-primary-light-red;
+    }
+
+    span:last-of-type {
+        color: $color-primary-light-red;
+        font-weight: 400;
+        font-style: italic;
+        font-size: 14px;
+        min-height: 22px;
+    }
+
+}
+
+@media all and (max-width:850px) {
+    .container {
+        width: 528px;
+    }
+}
+
+@media all and (max-width:640px) {
+    .container {
+        width: 295px;
+    }
+
+    .inputCell {
+        width: 88px;
+        height: 120px;
+
+        span:first-of-type {
+            font-size: 12px;
+        }
+    
+        input {
+            height: 54px;
+            width: 100%;
+            padding-left: 10px;
+            font-size: 20px;
+        }
+    
+        span:last-of-type {
+            font-size: 12px;
+            min-height: 38px;
+        }
+    
+    }
+}
