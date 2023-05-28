@@ -30,9 +30,8 @@ body {
 
 @media all and (max-width:640px) {
     .appContainer{
+        height: 486px;
         width: 343px;
         border-radius: 24px 24px 100px 24px;
     }
 }
-
-@media all and (max-width:360px) {}
